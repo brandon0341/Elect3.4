@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <link rel="stylesheet" href="status.css">
+</head>
+
+<body>
+    <header>
+        <nav class="section__container nav__container">
+            <div class="nav__logo">Mobile<span>HealthClinic</span></div>
+            <ul class="nav__links">
+
+                <a href="/index.html"><button class="btn">Home</button></a>
+            </ul>
+        </nav>
+        <div class="section__container header__container">
+            <div class="header__content">
+                <h1>Appointment Status:</h1>
+                <div class="header__form">
+                    <form>
+                        <div class="inside_form">
+                            <h4>Check Status</h4>
+                            <input type="text" placeholder="First Name" />
+                            <input type="text" placeholder="Last Name" />
+                            <input type="text" placeholder="Address" />
+                            <input type="text" placeholder="Phone No." />
+                        </div>
+                        <div>
+                            <p>
+                                Thank you for choosing our clinic for your medical check-up needs. We understand the
+                                importance of timely and efficient scheduling, and we appreciate your patience.
+                            </p>
+                            <p>
+                                If you have recently sent a request for an appointment, please be assured that our staff
+                                is diligently processing your request. Confirmation of your appointment will be sent to
+                                you via your preferred method of communication, be it email, phone call, or text
+                                message.
+                            </p>
+                            <div>
+                                <i class="fa-regular fa-circle-check check"></i>
+                                <p>
+                                    The appointment has been received. The package will be on your location
+                                    approximately _____
+                                    (If the confirmation is received, this will display.)
+                                </p>
+                                <i class="fa-solid fa-circle-xmark wrong"></i>
+                                <p>
+                                    Waiting for the confirmation from the facility.
+                                    (If the confirmation has not been received, this will display.)
+                                </p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+</body>
+
+</html>

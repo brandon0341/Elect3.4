@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+    <header>
+        <nav class="section__container nav__container">
+            <div class="nav__logo">Mobile<span>HealthClinic</span></div>
+            <ul class="nav__links">
+
+                <a href="/index.html"><button class="btn">Home</button></a>
+            </ul>
+        </nav>
+        <div class="section__container header__container">
+            <div class="header__content">
+                <h1>Appointment Status:</h1>
+                <div class="header__form">
+                    <form>
+                        <div>
+                            <ul id="accordion">
+                                <li>
+                                    <label for="first"><span>&#x3e;</span></label>
+                                    <input type="radio" name="accordion" id="first" checked>
+                                    <div class="content">
+                                        <input type="text" placeholder="First Name" />
+                                        <input type="text" placeholder="Last Name" />
+                                        <input type="text" placeholder="Address" />
+                                        <input type="text" placeholder="Phone No." />
+                                    </div>
+                                </li>
+                                <div>
+                                    <button class="btn" onclick="showToast(approve)">Accept</button>
+                                    <button class="btn" onclick="showToast(decline)">Decline</button>
+                                </div>
+                                <li>
+                                    <label for="second"><span>&#x3e;</span></label>
+                                    <input type="radio" name="accordion" id="second">
+                                    <div class="content">
+                                        <input type="text" placeholder="First Name" />
+                                        <input type="text" placeholder="Last Name" />
+                                        <input type="text" placeholder="Address" />
+                                        <input type="text" placeholder="Phone No." />
+                                    </div>
+                                </li>
+                                <div>
+                                    <button class="btn" onclick="showToast(approve)">Accept</button>
+                                    <button class="btn" onclick="showToast(decline)">Decline</button>
+                                </div>
+                                <li>
+                                    <label for="third"><span>&#x3e;</span></label>
+                                    <input type="radio" name="accordion" id="third">
+                                    <div class="content">
+                                        <input type="text" placeholder="First Name" />
+                                        <input type="text" placeholder="Last Name" />
+                                        <input type="text" placeholder="Address" />
+                                        <input type="text" placeholder="Phone No." />
+                                    </div>
+                                </li>
+                                    <div>
+                                        <button class="btn" onclick="showToast(approve)">Accept</button>
+                                        <button class="btn" onclick="showToast(decline)">Decline</button>
+                                    </div>
+                            </ul>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div id="toastBox"></div>
+
+
+    </header>
+        <script>
+
+            let toastBox = document.getElementById('toastBox');
+            let approve = '<i class="fa-regular fa-circle-check check"> Your appointment has been approved.';
+            let decline = '<i class="fa-solid fa-circle-xmark wrong"> Your appointment has been declined.';
+
+            function showToast(msg) {
+                let toast =document.createElement('div');
+                toast.classList.add('toast');
+                toast.innerHTML = msg;
+                toastBox.appendChild(toast);
+
+                if(msg.includes('declined')){
+                    toast.classList.add('declined');
+                }
+
+                setTimeout(()=> {
+                    toast.remove();
+                },6000);
+            }
+
+        </script>
+</body>
+
+</html>
