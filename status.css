@@ -144,6 +144,10 @@ header {
   border-radius: 5px;
 }
 
+.header__form i{
+  font-size: 30px;
+}
+
 .inside_form{
     display: grid;
     gap: 2rem;
